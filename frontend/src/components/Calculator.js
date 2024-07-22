@@ -130,7 +130,7 @@ const Calculator = ({ email }) => {
 
   return (
     <div className="calculator">
-      <h2 className="text-center my-4">Council and Committee Share Analyzer</h2>
+      <h2 className="text-center my-4">Council and Committee Share Calculator</h2>
       <div className="weights-container mb-4">
         <div className='wieghttitle'>
           <h3>Weights</h3>
