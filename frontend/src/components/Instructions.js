@@ -18,12 +18,12 @@ const Instructions = ({ showInstructions, handleClose, email, handleEmailChange,
 
           <h5 className="text-lg font-semibold mb-2">Parameters Descriptions:</h5>
           <ul className="list-disc pl-5 mb-4">
-            <li><strong>Decision Making Authority:</strong> 🏛️ Evaluates the level of decision-making power vested in each HCC.</li>
-            <li><strong>Scope of Influence:</strong> 🌐 Assesses the range and extent of influence each HCC has over different areas of the Optimism ecosystem.</li>
-            <li><strong>Community Engagement:</strong> 🤝 Measures the level of engagement and interaction each HCC has with the wider community.</li>
-            <li><strong>Operational Independence:</strong> 🔄 Determines the degree of independence each HCC has in its operations and decision-making processes.</li>
-            <li><strong>Voting Power:</strong> 🗳️ Quantifies the voting power held by each HCC.</li>
-            <li><strong>Veto Power:</strong> 🚫 Assesses the authority each HCC has to veto proposals or decisions made by other HCCs.</li>
+            <li><strong>Decision Making Authority:</strong> 🏛️ This parameter measures the extent to which a HCC has the power to make binding decisions that affect the governance or operations of Optimism.</li>
+            <li><strong>Scope of Influence:</strong> 🌐 This parameter assesses the breadth of the HCC impact within the Optimism ecosystem, including the range of areas or activities they influence.</li>
+            <li><strong>Community Engagement:</strong> 🤝 This parameter evaluates how actively the HCC interacts with the community, including gathering feedback, holding public meetings, and providing updates. </li>
+            <li><strong>Operational Independence:</strong> 🔄 This parameter measures the degree of autonomy the HCC has in its operations, including budget control, decision-making processes, and procedural oversight.</li>
+            <li><strong>Voting Power:</strong> 🗳️ This parameter assesses the extent of voting authority held by the HCC members, including the ability to approve or reject proposals.</li>
+            <li><strong>Veto Power:</strong> 🚫 This parameter evaluates whether the HCC has the authority to veto or reject decisions made by other governance bodies.</li>
           </ul>
 
           <h5 className="text-lg font-semibold mb-2">Getting Started with the HCC Influence Calculator:</h5>

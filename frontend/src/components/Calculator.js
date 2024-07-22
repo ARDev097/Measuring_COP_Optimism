@@ -130,7 +130,7 @@ const Calculator = ({ email }) => {
 
   return (
     <div className="calculator">
-      <h2 className="text-center my-4">Council and Committee Share Calculator</h2>
+      <h2 className="text-center my-4">HCC Influence Analyzer</h2>
       <div className="weights-container mb-4">
         <div className='wieghttitle'>
           <h3>Weights</h3>
@@ -190,7 +190,7 @@ const Calculator = ({ email }) => {
           variant="primary"
           onClick={calculateResults}
         >
-          Calculate Share
+          Calculate Influence
         </Button>
         <Button
            style={{ flex: 1, backgroundColor: '#6c757d', color: '#fff', border: 'none', marginRight: '10px' }}
