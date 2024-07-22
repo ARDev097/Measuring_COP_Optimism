@@ -68,7 +68,11 @@ const Calculator = ({ email }) => {
   };
 
   const saveData = async () => {
+    console.log("Email",email);
+    console.log("Weights",weights);
+    console.log("Scores",scores);
     try {
+      // https://delightful-jagged-pentaceratops.glitch.me/save
       await axios.post('http://localhost:5000/save', {
         email,
         weights,

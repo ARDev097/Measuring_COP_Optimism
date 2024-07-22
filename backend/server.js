@@ -1,54 +1,69 @@
+const fs = require('fs');
+const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const { createObjectCsvWriter } = require('csv-writer');
-const fs = require('fs');
-const path = require('path');
 
 const app = express();
 const port = 5000;
 
-// Middleware
 app.use(cors());
 app.use(bodyParser.json());
 
-// CSV Writer setup
-const csvWriter = createObjectCsvWriter({
-  path: path.join(__dirname, 'data.csv'),
-  header: [
-    { id: 'email', title: 'Email' },
-    { id: 'weights', title: 'Weights' },
-    { id: 'scores', title: 'Scores' },
-  ],
-  append: true // Ensure that new records are appended to the file
+// Path to the JSON file
+const jsonFilePath = path.join(__dirname, 'data.json');
+
+app.get('/', (req, res) => {
+  res.send('Welcome to the Data API!');
 });
 
-// Route to handle saving data
 app.post('/save', (req, res) => {
-  console.log('Received data:', req.body); // Log incoming data
+  console.log('Received data:', req.body);
 
   const { email, weights, scores } = req.body;
 
   if (!email || !weights || !scores) {
-    console.log('Missing required data'); // Log missing data error
+    console.log('Missing required data');
     return res.status(400).send('Bad Request: Missing required data.');
   }
 
-  const record = {
-    email,
-    weights: JSON.stringify(weights),
-    scores: JSON.stringify(scores),
-  };
+  const record = { email, weights, scores };
 
-  csvWriter.writeRecords([record])
-    .then(() => {
-      console.log('Data saved successfully'); // Log success
-      res.send('Data saved successfully.');
-    })
-    .catch(error => {
-      console.error('Error writing to CSV:', error.message); // Log error
-      res.status(500).send(`Error: ${error.message}`);
-    });
+  // Read existing data
+  fs.readFile(jsonFilePath, 'utf8', (err, data) => {
+    if (err) {
+      if (err.code === 'ENOENT') {
+        // If file does not exist, create it with an empty array
+        fs.writeFile(jsonFilePath, JSON.stringify([record], null, 2), 'utf8', (err) => {
+          if (err) {
+            console.error('Error writing to JSON file:', err.message);
+            res.status(500).send(`Error: ${err.message}`);
+          } else {
+            console.log('Data saved successfully');
+            res.send('Data saved successfully.');
+          }
+        });
+      } else {
+        console.error('Error reading JSON file:', err.message);
+        res.status(500).send(`Error: ${err.message}`);
+      }
+    } else {
+      // Parse existing data and add new record
+      const existingData = JSON.parse(data);
+      existingData.push(record);
+
+      // Write updated data back to the file
+      fs.writeFile(jsonFilePath, JSON.stringify(existingData, null, 2), 'utf8', (err) => {
+        if (err) {
+          console.error('Error writing to JSON file:', err.message);
+          res.status(500).send(`Error: ${err.message}`);
+        } else {
+          console.log('Data saved successfully');
+          res.send('Data saved successfully.');
+        }
+      });
+    }
+  });
 });
 
 app.listen(port, () => {
