@@ -133,7 +133,7 @@ const Calculator = ({ email }) => {
       <h2 className="text-center my-4">HCC Influence Analyzer</h2>
       <div className="weights-container mb-4">
         <div className='wieghttitle'>
-          <h3>Weights</h3>
+          <h3>Parameter Weights</h3>
           <div>(Weights for parameter)</div>
         </div>
         <div className="row">
@@ -158,7 +158,7 @@ const Calculator = ({ email }) => {
       </div>
       <div className="scores-container">
         <div className='counciltitlel'>
-          <h3>Score</h3>
+          <h3>Parameter Scores</h3>
           <div>(Score of parameter in each Council)</div>
         </div>
         {Object.keys(scores).map((council) => (
@@ -190,14 +190,14 @@ const Calculator = ({ email }) => {
           variant="primary"
           onClick={calculateResults}
         >
-          Calculate Influence
+          Calculate Influence 🔍
         </Button>
         <Button
            style={{ flex: 1, backgroundColor: '#6c757d', color: '#fff', border: 'none', marginRight: '10px' }}
           variant="secondary"
           onClick={handleLogout}
         >
-          Logout
+          Log Out 🚪
         </Button>
       </div>
       <Modal show={showResults} onHide={() => setShowResults(false)} centered>
