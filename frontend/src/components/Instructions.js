@@ -9,7 +9,6 @@ const Instructions = ({ showInstructions, handleClose, email, handleEmailChange,
       <div className="p-8 rounded-lg shadow-lg w-full max-w-lg outerdiv">
         <div className="instructiondiv">
           <h2 className="text-xl font-semibold">Instructions</h2>
-
         </div>
         <div className="p-6">
           <p className="mb-4">Welcome to the Council Share Calculator! This tool allows you to calculate the share of different houses, councils, and committees within the Optimism Collective. Please read through the instructions and parameter descriptions carefully before proceeding.</p>
@@ -28,10 +27,16 @@ const Instructions = ({ showInstructions, handleClose, email, handleEmailChange,
           <ol className="list-decimal pl-5 mb-4">
             <li><strong>Enter Your Email:</strong> Please provide your email address to proceed. This will allow us to save your configurations and results.</li>
             <li><strong>Set Weights for Parameters:</strong> Adjust the weightage for each of the six parameters. The total weight must add up to 100%.</li>
-            <li><strong>Assign Scores:</strong> For each house, council, or committee, assign a score (0-5) for each parameter based on your assessment.</li>
+            <li>
+              <strong>Assign Scores:</strong> For each house, council, or committee, assign a score (0-5) for each parameter based on your assessment.
+              <ul className="list-disc pl-5 mb-4 mt-2">
+                <li><strong>Score Interpretation:</strong></li>
+                <li><strong>0:</strong> Indicates no influence or power in the given parameter.</li>
+                <li><strong>5:</strong> Indicates maximum influence or power in the given parameter.</li>
+              </ul>
+            </li>
             <li><strong>Calculate Shares:</strong> Once all weights and scores are set, click on the "Calculate Weighted Scores and Percentages" button to see the results.</li>
             <li><strong>Review Results:</strong> The results will display the calculated share percentages for each house, council, or committee. You can modify the weights and scores as needed and recalculate.</li>
-          
           </ol>
 
           <h5 className="text-lg font-semibold mb-2">Example:</h5>
@@ -57,7 +62,7 @@ const Instructions = ({ showInstructions, handleClose, email, handleEmailChange,
         <div className="flex justify-end p-4 border-t submitbtn">
           <button
             onClick={handleContinue}
-            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 "
+            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
           >
             Continue
           </button>
