@@ -6,19 +6,19 @@ const defaultWeights = {
   WD: 35,
   WS: 25,
   WC: 10,
-  WO: 10,
-  WV: 10,
-  WVe: 5,
+  WO: 5,
+  WV: 15,
+  WVe: 10,
 };
 
 const defaultScores = {
-  "Token House": [4, 5, 4, 4, 5, 4],
-  "Citizens' House": [5, 5, 5, 5, 4, 5],
-  "Grants Council": [2.5, 2, 1.5, 1, 0, 0],
+  "Token House": [4, 5, 4, 4, 5, 3],
+  "Citizens' House": [5, 4, 5, 5, 4, 5],
+  "Grants Council": [2, 1.5, 1.5, 1, 0.5, 0],
   "Grants Council M&M": [0.5, 0.5, 0.5, 0.5, 0, 0],
-  "Security Council": [1, 2, 0, 1, 0, 0],
-  "Code of Conduct Council": [0.5, 1, 0.5, 1, 0, 0],
-  "Developer Advisory Board": [0, 0.5, 0, 1, 0, 1],
+  "Security Council": [3, 2, 0, 3, 0, 0],
+  "Code of Conduct Council": [1, 0.5, 0.5, 1, 0, 0],
+  "Developer Advisory Board": [0.5, 0.5, 0, 1, 0, 0.5],
 };
 
 const parameterNames = [
