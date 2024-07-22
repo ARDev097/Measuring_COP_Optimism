@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import './App.css';
 import Calculator from './components/Calculator';
@@ -9,12 +9,22 @@ function App() {
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
 
+  useEffect(() => {
+    // Check local storage to determine whether to show Instructions or Calculator
+    const storedEmail = localStorage.getItem('userEmail');
+    if (storedEmail) {
+      setEmail(storedEmail);
+      setShowInstructions(false);
+    }
+  }, []);
+
   const handleEmailChange = (value) => {
     setEmail(value);
   };
 
   const handleContinue = () => {
     if (validateEmail(email)) {
+      localStorage.setItem('userEmail', email); // Save email to local storage
       setShowInstructions(false);
       setEmailError('');
     } else {

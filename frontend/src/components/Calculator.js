@@ -40,6 +40,7 @@ const Calculator = ({ email }) => {
 
   useEffect(() => {
     updateRemainingPercentage();
+    window.scrollTo(0, 0); // Scroll to top on component mount
   }, [weights]);
 
   const updateRemainingPercentage = () => {
@@ -118,9 +119,14 @@ const Calculator = ({ email }) => {
     }
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('userEmail');
+    window.location.reload(); // Reload the page to show Instructions
+  };
+
   return (
     <div className="calculator">
-      <h2 className="text-center my-4">Council Share Calculator</h2>
+      <h2 className="text-center my-4">Council and Committee Share Analyzer</h2>
       <div className="weights-container mb-4">
         <div className='wieghttitle'>
           <h3>Weights</h3>
@@ -174,10 +180,22 @@ const Calculator = ({ email }) => {
           </div>
         ))}
       </div>
-      <Button style={{ marginBottom: "40px" }} variant="primary" onClick={calculateResults}>
-        Calculate Weighted Scores and Percentages
-      </Button>
-
+      <div className="button-container d-flex justify-content-between mb-4">
+        <Button
+          style={{ flex: 1, marginRight: '10px' }}
+          variant="primary"
+          onClick={calculateResults}
+        >
+          Calculate Share
+        </Button>
+        <Button
+           style={{ flex: 1, backgroundColor: '#6c757d', color: '#fff', border: 'none', marginRight: '10px' }}
+          variant="secondary"
+          onClick={handleLogout}
+        >
+          Logout
+        </Button>
+      </div>
       <Modal show={showResults} onHide={() => setShowResults(false)} centered>
         <Modal.Header closeButton>
           <Modal.Title>Calculation Results</Modal.Title>
