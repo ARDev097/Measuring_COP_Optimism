@@ -18,7 +18,7 @@ const defaultScores = {
   "Token House": [4, 5, 4, 4, 5, 3],
   "Citizens' House": [5, 4, 5, 5, 4, 5],
   "Grants Council": [2, 1.5, 1.5, 1, 0.5, 0],
-  "Grants Council M&M": [0.5, 0.5, 0.5, 0.5, 0, 0],
+  "Grants Council M&M (Milestones & Metrics)": [0.5, 0.5, 0.5, 0.5, 0, 0],
   "Security Council": [3, 2, 0, 3, 0, 0],
   "Code of Conduct Council": [1, 0.5, 0.5, 1, 0, 0],
   "Developer Advisory Board": [0.5, 0.5, 0, 1, 0, 0.5],
