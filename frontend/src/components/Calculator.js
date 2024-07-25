@@ -94,7 +94,7 @@ const Calculator = ({ email }) => {
     console.log("Results", results ? results : "no data"); 
   
     try {
-      await axios.post('http://localhost:5000/save', {
+      await axios.post('https://cop.lamproslabs.io/save', {
         email,
         weights,
         scores,
