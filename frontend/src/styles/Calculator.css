@@ -1,0 +1,51 @@
+.calculator {
+    padding: 20px;
+  }
+  
+  .weights-container, .scores-container {
+    width: 100%;
+  }
+  
+  .weights-container .row, .scores-container .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .weight-label, .score-label {
+    font-size: 1rem; /* Increased font size */
+  }
+  
+  .weight-field, .score-field {
+    width: 100%; /* Ensures the fields take the full width of their container */
+  }
+  
+  .wieghttitle, .counciltitle, .counciltitlel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .wieghttitle h3, .counciltitlel h3 {
+    font-size: 1.5rem; /* Increased font size */
+  }
+  
+  .wieghttitle div, .counciltitlel div {
+    font-size: 1rem; /* Increased font size */
+  }
+  
+  .counciltitle {
+    font-size: 1.2rem; /* Increased font size */
+    margin-bottom: 1rem;
+  }
+  
+  button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button-container button {
+    flex: 1;
+    margin: 0 10px;
+  }
+  

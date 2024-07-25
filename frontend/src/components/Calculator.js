@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Form, Button, Alert, Modal } from 'react-bootstrap';
+import { Form, Button, Alert, Modal, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import '../styles/Calculator.css'; 
 
 const defaultWeights = {
   WD: 35,
@@ -21,13 +24,22 @@ const defaultScores = {
   "Developer Advisory Board": [0.5, 0.5, 0, 1, 0, 0.5],
 };
 
+const parameterDescriptions = {
+  WD: "This parameter measures the extent to which a HCC has the power to make binding decisions that affect the governance or operations of Optimism.",
+  WS: "This parameter assesses the breadth of the HCC impact within the Optimism ecosystem, including the range of areas or activities they influence.",
+  WC: "This parameter evaluates how actively the HCC interacts with the community, including gathering feedback, holding public meetings, and providing updates.",
+  WO: "This parameter measures the degree of autonomy the HCC has in its operations, including budget control, decision-making processes, and procedural oversight.",
+  WV: "This parameter assesses the extent of voting authority held by the HCC members, including the ability to approve or reject proposals.",
+  WVe: "This parameter evaluates whether the HCC has the authority to veto or reject decisions made by other governance bodies."
+};
+
 const parameterNames = [
-  "Decision Making Authority (WD)",
-  "Scope of Influence (WS)",
-  "Community Engagement (WC)",
-  "Operational Independence (WO)",
-  "Voting Power (WV)",
-  "Veto Power (WVe)"
+  "Decision Making Authority",
+  "Scope of Influence",
+  "Community Engagement",
+  "Operational Independence",
+  "Voting Power",
+  "Veto Power"
 ];
 
 const Calculator = ({ email }) => {
@@ -67,23 +79,34 @@ const Calculator = ({ email }) => {
     setScores(updatedScores);
   };
 
+  useEffect(() => {
+    if (results) {
+      console.log("calling save data function")
+      saveData();
+    }
+  }, [results]);
+
+
   const saveData = async () => {
-    console.log("Email",email);
-    console.log("Weights",weights);
-    console.log("Scores",scores);
+    console.log("Email", email);
+    console.log("Weights", weights);
+    console.log("Scores", scores);
+    console.log("Results", results ? results : "no data"); 
+  
     try {
-      // https://delightful-jagged-pentaceratops.glitch.me/save
       await axios.post('http://localhost:5000/save', {
         email,
         weights,
-        scores
+        scores,
+        results // Send results
       });
     } catch (error) {
       console.error("There was an error saving the data!", error);
     }
-  };
+  };  
+  
 
-  const calculateResults = () => {
+  const calculateResults = async () => {
     let totalWeightedScores = 0;
     const weightedScores = {};
 
@@ -117,9 +140,10 @@ const Calculator = ({ email }) => {
           console.log(`NaN% encountered for council: ${council}`);
         }
       }
+      console.log("resultText", resultText)
       setResults(resultText);
       setShowResults(true);
-      saveData(); // Save data when results are calculated
+      // await saveData(); // Save data when results are calculated
     }
   };
 
@@ -138,14 +162,25 @@ const Calculator = ({ email }) => {
         </div>
         <div className="row">
           {Object.keys(defaultWeights).map((key, index) => (
-            <div key={key} className="col-md-2 mb-3">
+            <div key={key} className="col-md-4 mb-3  gap-2"> {/* Changed col-md-2 to col-md-4 */}
               <Form.Group>
-                <Form.Label>{parameterNames[index]}</Form.Label>
+                <Form.Label className="weight-label"> {/* Added weight-label class */}
+                  {parameterNames[index]}
+                  <OverlayTrigger
+                    placement="top"
+                    overlay={<Tooltip id={`tooltip-${key}`}>{parameterDescriptions[key]}</Tooltip>}
+                  >
+                    <span className="ml-4" style={{ marginLeft: '10px' }}>
+                      <FontAwesomeIcon icon={faInfoCircle} />
+                    </span>
+                  </OverlayTrigger>
+                </Form.Label>
                 <Form.Control
                   type="text"
                   name={key}
                   value={weights[key]}
                   onChange={handleWeightChange}
+                  className="weight-field" 
                 />
               </Form.Group>
             </div>
@@ -166,7 +201,8 @@ const Calculator = ({ email }) => {
             <div className='counciltitle'>{council}</div>
             <div className="row">
               {scores[council].map((score, index) => (
-                <div key={index} className="col-md-2 mb-2">
+                <div key={index} className="col-md-4 mb-2"> {/* Changed col-md-2 to col-md-4 */}
+                    <div style={{ fontSize: 'small', color: 'grey' }}>{parameterNames[index]}</div>
                   <Form.Group>
                     <Form.Control
                       type="number"
@@ -176,6 +212,7 @@ const Calculator = ({ email }) => {
                       onChange={(e) =>
                         handleScoreChange(council, index, e.target.value)
                       }
+                      className="score-field" 
                     />
                   </Form.Group>
                 </div>
@@ -186,21 +223,20 @@ const Calculator = ({ email }) => {
       </div>
       <div className="button-container d-flex justify-content-between mb-4">
         <Button
-          style={{ flex: 1, marginRight: '10px' }}
-          variant="primary"
-          onClick={calculateResults}
+          style={{ flex: 1, marginRight: '1rem' }}
+          onClick={()=> calculateResults()}
         >
-          Calculate Influence 🔍
+          Calculate
         </Button>
         <Button
-           style={{ flex: 1, backgroundColor: '#6c757d', color: '#fff', border: 'none', marginRight: '10px' }}
-          variant="secondary"
+          variant="danger"
+          style={{ flex: 1 }}
           onClick={handleLogout}
         >
-          Log Out 🚪
+          Logout
         </Button>
       </div>
-      <Modal show={showResults} onHide={() => setShowResults(false)} centered>
+      <Modal show={showResults} onHide={() => setShowResults(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Calculation Results</Modal.Title>
         </Modal.Header>
