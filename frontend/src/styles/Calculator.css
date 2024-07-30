@@ -1,51 +1,161 @@
 .calculator {
-    padding: 20px;
-  }
-  
-  .weights-container, .scores-container {
-    width: 100%;
-  }
-  
-  .weights-container .row, .scores-container .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .weight-label, .score-label {
-    font-size: 1rem; /* Increased font size */
-  }
-  
-  .weight-field, .score-field {
-    width: 100%; /* Ensures the fields take the full width of their container */
-  }
-  
-  .wieghttitle, .counciltitle, .counciltitlel {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .wieghttitle h3, .counciltitlel h3 {
-    font-size: 1.5rem; /* Increased font size */
-  }
-  
-  .wieghttitle div, .counciltitlel div {
-    font-size: 1rem; /* Increased font size */
-  }
-  
-  .counciltitle {
-    font-size: 1.2rem; /* Increased font size */
-    margin-bottom: 1rem;
-  }
-  
-  button-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  button-container button {
-    flex: 1;
-    margin: 0 10px;
-  }
-  
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.weights-container, .scores-container {
+  width: 100%;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.weights-container .row, .scores-container .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.weight-label, .score-label {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.weight-field, .score-field {
+  width: 100%;
+}
+
+.wieghttitle, .counciltitle, .counciltitlel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wieghttitle h3, .counciltitlel h3 {
+  font-size: 1.5rem;
+  color: #fe0420;
+}
+
+.wieghttitle div, .counciltitlel div {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.counciltitle {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #fe0420;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.header-pw{
+  background-color: #f8f9fa;
+  position: sticky;
+  top: 0px;
+}
+
+.button-container button {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.changed-data-display {
+  background-color: #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.changed-data-display h4 {
+  color: #fe0420;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.changed-data-display h5 {
+  color: #6c757d;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.changed-data-display h6 {
+  color: #495057;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.changed-data-display p {
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.changed {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.info-icon {
+  margin-left: 5px;
+  color: #6c757d;
+}
+
+.calculator-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.calculator-content {
+  display: flex;
+  width: 100%;
+}
+
+.form-section {
+  border-right: 0.5px solid rgba(0, 0, 0, 0.342);
+  flex: 0 0 70%;
+  padding: 20px;
+}
+
+.changed-data-section {
+  flex: 0 0 30%;
+  padding: 20px;
+  /* background-color: #f7f7f7; */
+  /* border-left: 1px solid #ddd; */
+  position: sticky;
+  top: 20px; /* Adjust this value to your preference */
+  align-self: flex-start; /* Ensures the sticky container starts from the top */
+}
+
+.changed-data-display pre {
+  white-space: pre-wrap;
+}
+
+.savedatabutton{
+  background-color: #fe0420 !important;
+  color: white;
+  border-radius: 30px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.savedatabutton:hover{
+  color: #fe0420 !important;
+  background-color: white !important; 
+  /* border-radius: 20px; */
+  padding: 10px;
+  font-weight: 700;
+  border: 1px solid #fe0420;
+}

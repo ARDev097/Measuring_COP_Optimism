@@ -103,7 +103,9 @@ const Instructions = ({
   ];
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 divouter">
-      <div className="p-8 rounded-lg shadow-lg w-full max-w-lg outerdiv">
+      <div className="p-8 rounded-lg  w-full max-w-lg outerdiv">
+        <div className="whole-intruction-div">
+
         <div className="instructiondiv">
           <h2 className="text-xl font-semibold">Instructions 📋</h2>
         </div>
@@ -200,12 +202,14 @@ const Instructions = ({
         <div className="flex justify-end p-4 border-t submitbtn">
           <button
             onClick={handleContinue}
-            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            className="continuebutton"
           >
-            Continue 🚀
+            Continue 
           </button>
         </div>
       </div>
+      </div>
+
     </div>
   );
 };
