@@ -89,18 +89,19 @@ const Instructions = ({
       ],
     },
     {
-      title: "Calculate Shares:",
+      title: "View Influence Analysis:",
       icon: "📊",
       description:
-        'Once all weights and scores are set, click on the "Calculate Share" button to see the results.',
+        "Based on the weights and scores you set, the influence of each HCC will be calculated. You can view this information in the 'HCC Influence Analysis' section on the right side of the screen. This section displays 'Influence Based on Initial Values,' 'Influence Based on Your Adjustments,' and a comparison of the changed values.",
     },
     {
-      title: "Review Results:",
-      icon: "📝",
+      title: "Save Your Data:",
+      icon: "💾",
       description:
-        "The results will display the calculated share percentages for each HCC. You can modify the weights and scores as needed and recalculate.",
+        "Once you have finalized the weights and scores, click the 'Save Data' button in the 'HCC Influence Analysis' section to save your data. This ensures your adjustments are recorded and can be referenced.",
     },
   ];
+  
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 divouter">
       <div className="p-8 rounded-lg  w-full max-w-lg outerdiv">
