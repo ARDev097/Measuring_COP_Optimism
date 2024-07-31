@@ -61,13 +61,13 @@ const Instructions = ({
       title: "Set Weights for Parameters:",
       icon: "⚖️",
       description:
-        "Adjust the weightage for each of the six parameters. The total weight must add up to 100%.",
+        "Adjust the weightage for each of the six parameters. The total weight must add up to 100%. As you modify the weights, the background color of the fields will change, highlighting the fields that have been altered. This feature helps you easily identify the changes you've made.",
     },
     {
       title: "Assign Scores:",
       icon: "⭐",
       description:
-        "For each HCC, assign a score (0-5) for each parameter based on your assessment.",
+        "For each HCC, assign a score (0-5) for each parameter based on your assessment. The scores reflect the influence or power each HCC holds in various aspects. When you change a score, the field's background color will update, indicating that the field has been modified. This visual cue helps you keep track of the changes you've made.",
       sublist: [
         {
           title: "Score Interpretation:",
@@ -181,6 +181,23 @@ const Instructions = ({
               </li>
             ))}
           </ol>
+
+          <div style={{ marginBottom: "16px" }}>
+              <h5 className="text-lg font-semibold mb-2">
+                Guide to Using the HCC Influence Analyzer:
+              </h5>
+              <p>
+                For a detailed walkthrough on how to use this tool effectively, please refer to our comprehensive guide:
+                <a 
+                  href="https://coffee-cheap-marten-178.mypinata.cloud/ipfs/Qmc3LisjwfGhTrbEZBYBdCmqKd8RRLwXxkWk3T3fkN4zsg" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 ml-2"
+                >
+                  HCC Influence Analyzer Guide
+                </a>
+              </p>
+            </div>
 
           <div style={{ marginBottom: "16px" }}>
             <h5 className="text-lg font-semibold mb-2">Enter your Email:</h5>
