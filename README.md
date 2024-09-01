@@ -1,4 +1,6 @@
-![Optimism Logo](./OP Image.png)
+<p align="center">
+  <img src="./OP.png" alt="Optimism Logo" />
+</p>
 
 # ⚡ Measuring the Concentration of Power in Optimism
 
