@@ -27,24 +27,24 @@ This section provides access to various resources related to the project, includ
 
 1. **📝 Research Report**  
    **Description:** A comprehensive report detailing the analysis, findings, and insights on council and committee influence within the Optimism ecosystem.  
-   **Access:** [Research Report]
+   **Access:** [[Research Report](https://coffee-cheap-marten-178.mypinata.cloud/ipfs/QmYnABHD35hg8yRQKTrxbJgJCwogeAdtEsgaVBLRKLy9gc)]
 
 2. **🔍 Behind the Scenes Documentation**  
    **Description:** In-depth look at the underlying processes and methodologies used in the calculations, offering additional context and technical insights.  
-   **Access:** [Behind the Scenes]
+   **Access:** [[Behind the Scenes](https://docs.google.com/document/d/16dKJOd84x4eJkFe_ch8kWImylfVdYOhH9SS-ahYWHYA/edit?usp=sharing)]
 
 3. **🗒️ Observation File**  
    **Description:** Detailed observations and notes relevant to the analysis and calculations for council and committee influence.  
-   **Access:** [Observations]
+   **Access:** [[Observations](https://docs.google.com/document/d/1BwiWLmY01IGLkDs1M6hB264NCcMYAGF7i0Z1X2C9unM/edit?usp=sharing)]
 
 4. **📊 Frontend Dashboard**  
    **Description:** A user-friendly dashboard showcasing each member's influence across various DAOs. Users can easily explore and compare the influence of different members. The dashboard also features the Daily CPI value for Optimism, providing a clear and interactive view of the ecosystem's dynamics.  
-   **Access:** [Optimism CPI]
+   **Access:** [[Optimism CPI](https://cpi-one.vercel.app/)]
 
 5. **⚖️ Influence Calculator**  
    **Description:** A tool for evaluating the influence of Houses, Councils, and Committees (HCCs) within the Optimism Collective, based on six key parameters. Community members can assign weights and scores to help identify power concentration within the ecosystem.  
-   **Access:** [Influence Calculator]
+   **Access:** [[Influence Calculator](https://optimism-cop-analyzer.vercel.app/)]
 
 6. **📈 Presentation Link**  
    **Description:** A brief presentation highlighting the differences between the Concentration of Power Index (CPI) and the Herfindahl-Hirschman Index (HHI), along with an overview of the CPI calculation methodology within the Optimism ecosystem.  
-   **Access:** [Measuring COP in Optimism]
+   **Access:** [[Measuring COP in Optimism](https://coffee-cheap-marten-178.mypinata.cloud/ipfs/QmV9hQxERHU137e1DD2ex2Eiev5BmkUHNmTjdxV9fpRfzd)]
