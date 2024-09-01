@@ -19,6 +19,8 @@ This branch contains the datasets and scripts used to calculate the Herfindahl-H
 
 ## Resources
 
+This section provides access to various resources related to the project, including detailed reports, documentation, tools, and presentation. These resources are designed to help community members, developers, and researchers understand and engage with the analysis of power concentration within the Optimism ecosystem.
+
 1. **Research Report**  
    **Description:** A comprehensive report detailing the analysis, findings, and insights on council and committee influence within the Optimism ecosystem.  
    **Access:** [[Research Report](https://coffee-cheap-marten-178.mypinata.cloud/ipfs/QmYnABHD35hg8yRQKTrxbJgJCwogeAdtEsgaVBLRKLy9gc)]
