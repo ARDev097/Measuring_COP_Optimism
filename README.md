@@ -1,4 +1,5 @@
-![Optimism Logo]([./images/OP.png]([https://en.cryptonomist.ch/wp-content/uploads/2022/04/optimism.jpeg](https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2F%40fdsds462%2Fairdrop-5-by-optimism-op-6870124b9832&psig=AOvVaw2RcVJGXSx8Kp7iNS8cCHsi&ust=1725251048398000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOC2vZHzoIgDFQAAAAAdAAAAABAJ)))
+![Optimism Logo](./OP Image.png)
+
 # ⚡ Measuring the Concentration of Power in Optimism
 
 ## 🌐 Overview
