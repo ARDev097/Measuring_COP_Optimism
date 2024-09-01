@@ -27,7 +27,7 @@ This section provides access to various resources related to the project, includ
 
 1. **📝 Research Report**  
    **Description:** A comprehensive report detailing the analysis, findings, and insights on council and committee influence within the Optimism ecosystem.  
-   **Access:** [[Research Report](https://coffee-cheap-marten-178.mypinata.cloud/ipfs/QmYnABHD35hg8yRQKTrxbJgJCwogeAdtEsgaVBLRKLy9gc)]
+   **Access:** [[Research Report](https://coffee-cheap-marten-178.mypinata.cloud/ipfs/QmU3BQQArkknPdfjDap65jW4EVjNWgm9YvEDEgqBRfzA7R)]
 
 2. **🔍 Behind the Scenes Documentation**  
    **Description:** In-depth look at the underlying processes and methodologies used in the calculations, offering additional context and technical insights.  
