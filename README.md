@@ -1,4 +1,4 @@
-# Optimism Collective Influence and Power Concentration
+# Measuring the Concentration of Power in Optimism
 
 ## Overview
 
