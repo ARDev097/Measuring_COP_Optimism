@@ -39,7 +39,7 @@ This section provides access to various resources related to the project, includ
 
 4. **📊 Frontend Dashboard**  
    **Description:** A user-friendly dashboard showcasing each member's influence across various DAOs. Users can easily explore and compare the influence of different members. The dashboard also features the Daily CPI value for Optimism, providing a clear and interactive view of the ecosystem's dynamics.  
-   **Access:** [[Optimism CPI](https://cpi-one.vercel.app/)]
+   **Access:** [[Optimism CPI](https://www.daocpi.com/)]
 
 5. **⚖️ Influence Calculator**  
    **Description:** A tool for evaluating the influence of Houses, Councils, and Committees (HCCs) within the Optimism Collective, based on six key parameters. Community members can assign weights and scores to help identify power concentration within the ecosystem.  
